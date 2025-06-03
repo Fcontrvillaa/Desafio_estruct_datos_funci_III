@@ -1,17 +1,34 @@
+from funciones.menus import menu_principal
+from funciones.menus import menu_personalizar
+from funciones.tiempo_confirmar import tiempo_confirmacion
 
-def menu_principal():
-    """Muestra el menú principal de opciones."""
-    print("\n--- Menú Principal Pizza JAT ---")
-    print("1. Personalizar Pizza")
-    print("2. Mostrar Pizza Actual")
-    print("3. Estimar Tiempo y Confirmar Orden")
-    print("4. Salir")
 
-def personalizar_pizza():
-    print("\n--- Personalizar Pizza ---")
-    print("a. Cambiar Tipo de Masa")
-    print("b. Cambiar Tipo de Salsa")
-    print("c. Modificar Ingredientes")
-    print("d. Volver al Menú Principal")
+def main():
 
-def cambiar_masa(pizza):
+    pizza = {
+    "Masa": "Masa Tradicional",
+    "Salsa" : "Salsa de Tomate",
+    "ingredientes": ["1","2","3"]   
+    }
+
+
+while True:
+    menu_principal()
+    opcion_principal = input("Seleccione una opcion :")  #falta tray para nuemros validos....
+
+    if opcion_principal == "1":
+        menu_personalizar
+            
+    elif opcion_principal == "2":
+        print(f"La pizza actual es : {pizza}")
+
+    elif opcion_principal == "3":
+        tiempo_confirmacion()
+
+    else:
+        print("terminado")
+        break
+
+    
+    
+    
