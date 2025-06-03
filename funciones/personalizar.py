@@ -55,35 +55,34 @@ def salsa():
 
 def ingredientes():
     """añade o quita ingredientes de una lista """
+    
+    lista_ingredientes = {
+        "1": "Tomate",
+        "2": "Champiñones",
+        "3": "Aceituna",
+        "4": "Cebolla",
+        "5": "Pollo",
+        "6": "Jamón",
+        "7": "Carne",
+        "8": "Tocino",
+        "9": "Queso"
+    }
+    ingre_seleccionados = []
 
-    print("""/n Opciones de ingredientes:
-        1. Tomate
-        2. Champiñones
-        3. Aceituna
-        4. Cebolla
-        5. Pollo
-        6. Jamón
-        7. Carne
-        8. Tocino
-        9. Queso
-        """)
-    opcion_ingredientes = input()
-    ingrediente = []
+    while True:
 
-    if opcion_ingredientes == "1":
-        print("Has elejido Tomate")
-        ingrediente.append("Tomate")
-        print({ingrediente})
-        
-    elif opcion_ingredientes == "2":
-        print("Has elejido Salsa Alfredo")
-        return("Salsa Alfredo")
-    elif opcion_ingredientes == "3":
-        print("Has elejido Salsa Barbecue")
-        return("Salsa Barbecue")
-    elif opcion_ingredientes == "4":
-        print("Has elejido Salsa Pesto")
-        return("Salsa Pesto")
-        
+        print("\n--- Opciones de Ingredientes ---")
+        for numero, nombre in lista_ingredientes.items():
+            print(f"  {numero}.{nombre}")
+        if ingre_seleccionados:
+            print("\nIngredientes seleccionados actualmente:", ", ".join(ingre_seleccionados))
+        else:
+            print("\nSeleccionados hasta ahora: Ninguno")
+    #opcion_ingredientes = input()
+    #ingrediente = []
+    #print({ingrediente})
+    
     else:
         print("Elige una opcion valida de Ingredientes")
+
+    #
