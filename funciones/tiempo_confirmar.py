@@ -8,6 +8,6 @@ def tiempo_confirmacion(pizza):
 
     if confirmar == "si":
         print("Pedido Confirmado. Gracias por preferir pizzas JAT!")
-    
+        
     else:
         print("Orden Cancelada")
