@@ -3,6 +3,7 @@ from funciones.menus import menu_personalizar
 from funciones.tiempo_confirmar import tiempo_confirmacion
 from funciones.personalizar import masa
 from funciones.personalizar import salsa
+from funciones.personalizar import ingredientes
 
 
 def main():
@@ -16,7 +17,7 @@ def main():
 
     while True:
         menu_principal()
-        opcion_principal = input("Seleccione una opcion :")  #falta tray para nuemros validos....
+        opcion_principal = input("Seleccione una opciaon :")  #falta tray para nuemros validos....
 
         if opcion_principal == "1":
             
@@ -31,8 +32,14 @@ def main():
                     pizza ["Salsa"] = salsa()
 
                 elif opcion_personalizar == "c":
-                    print(opcion_personalizar)
-
+                    ingredientes()
+                        
+                        
+                
+                
+                
+                
+                
                 elif opcion_personalizar == "d":
                     print("vuelve a menu principal")
                     break

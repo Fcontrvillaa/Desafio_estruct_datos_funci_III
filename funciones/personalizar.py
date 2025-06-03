@@ -36,17 +36,54 @@ def salsa():
     opcion_salsa = input()
 
     if opcion_salsa == "1":
-        print("Has elijido Salsa de Tomate")
+        print("Has elejido Salsa de Tomate")
         return("Salsa de Tomate")
     elif opcion_salsa == "2":
-        print("Has elijido Salsa Alfredo")
+        print("Has elejido Salsa Alfredo")
         return("Salsa Alfredo")
     elif opcion_salsa == "3":
-        print("Has elijido Salsa Barbecue")
+        print("Has elejido Salsa Barbecue")
         return("Salsa Barbecue")
     elif opcion_salsa == "4":
-        print("Has elijido Salsa Pesto")
+        print("Has elejido Salsa Pesto")
+        return("Salsa Pesto")
+    
+    else:
+        print("Elige una opcion valida de masa")
+
+
+
+def ingredientes():
+    """añade o quita ingredientes de una lista """
+
+    print("""/n Opciones de ingredientes:
+        1. Tomate
+        2. Champiñones
+        3. Aceituna
+        4. Cebolla
+        5. Pollo
+        6. Jamón
+        7. Carne
+        8. Tocino
+        9. Queso
+        """)
+    opcion_ingredientes = input()
+    ingrediente = []
+
+    if opcion_ingredientes == "1":
+        print("Has elejido Tomate")
+        ingrediente.append("Tomate")
+        print({ingrediente})
+        
+    elif opcion_ingredientes == "2":
+        print("Has elejido Salsa Alfredo")
+        return("Salsa Alfredo")
+    elif opcion_ingredientes == "3":
+        print("Has elejido Salsa Barbecue")
+        return("Salsa Barbecue")
+    elif opcion_ingredientes == "4":
+        print("Has elejido Salsa Pesto")
         return("Salsa Pesto")
         
     else:
-        print("Elige una opcion valida de masa")
+        print("Elige una opcion valida de Ingredientes")
