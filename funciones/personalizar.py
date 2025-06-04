@@ -67,6 +67,7 @@ def ingredientes():
         "8": "Tocino",
         "9": "Queso"
     }
+    
     ingre_seleccionados = []
 
     while True:
@@ -85,4 +86,33 @@ def ingredientes():
     else:
         print("Elige una opcion valida de Ingredientes")
 
-    #
+    """"
+        print("las opciones son :")
+        
+        for k, v in frutas.items():
+            print(f"{k}.-{v}")   #muestra opciones
+
+        opcion = int(input(": "))
+
+        if opcion in frutas:
+            fruta = fruta[opcion]
+            vaso["frutas"].append(fruta)
+        
+---------------------------------------------------------
+
+        quitar_frutas
+
+            frutas = vaso["frutas"]
+            print("borra opciones:")
+
+            for i in frutas:
+                print(f"1 .-{i}")
+
+            opcion = int(input(": "))
+
+            if opcion in frutas:
+                fruta = frutas[opcion]
+                vaso[frutas] = remove(fruta)
+
+
+            """
