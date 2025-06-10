@@ -67,24 +67,88 @@ def ingredientes():
         "8": "Tocino",
         "9": "Queso"
     }
-    
+    #esta lista almacena  los ingredientes seleccionados
     ingre_seleccionados = []
 
     while True:
 
-        print("\n--- Opciones de Ingredientes ---")
-        for numero, nombre in lista_ingredientes.items():
-            print(f"  {numero}.{nombre}")
-        if ingre_seleccionados:
-            print("\nIngredientes seleccionados actualmente:", ", ".join(ingre_seleccionados))
-        else:
-            print("\nSeleccionados hasta ahora: Ninguno")
+        
+
+        print("""---Que desea hacer?--
+        'a' para añadir un ingrediente
+        'q' para quitar un ingrediente
+        's' para salir           
+              
+              """)
+        
+        
+        deseo = input(" :  ").lower()
+
+        if deseo == "s":
+            print("Selccion de ingreientes finalizada")
+            return(ingre_seleccionados)
+        elif deseo == "a":
+            print("\n--- Opciones de Ingredientes ---")
+                
+            for k, v in lista_ingredientes.items():
+                print(f"{k}.-{v}")   #muestra opciones
+            
+            opcion = input(" :  ").lower()
+
+            if opcion in lista_ingredientes:
+                seleccion = lista_ingredientes[opcion]
+                ingre_seleccionados.append(seleccion)
+                print("\nIngredientes seleccionados actualmente: " + ", ".join(ingre_seleccionados))
+
+            else:
+                print("\nSeleccionados hasta ahora: Ninguno")
+
+        elif deseo == "q":
+            
+            print("\n--- Opciones de Ingredientes ---")
+            for k, v in lista_ingredientes.items():
+                print(f"{k}.-{v}")   #muestra opciones 
+
+            print("\nIngredientes seleccionados actualmente: " + ", ".join(ingre_seleccionados))
+            opcion_numero = input("ingrese el numero del ingrediente a quitar :")
+
+            if opcion_numero in lista_ingredientes:    #existe en lista_ingredientes
+                
+                nombre_ingrediente_a_quitar = lista_ingredientes[opcion_numero]
+                
+                if nombre_ingrediente_a_quitar in ingre_seleccionados:
+                    ingre_seleccionados.remove(nombre_ingrediente_a_quitar) #  elimina el nombre del ingrediente
+                    print("\nIngredientes seleccionados actualmente: " + ", ".join(ingre_seleccionados))
+                
+                else:
+                    print(f"'{nombre_ingrediente_a_quitar}' no está en tus ingredientes seleccionados.")
+            else:
+                print("\nOpción inválida. Por favor, ingrese un número del 1 al 9.")
+
+            if not ingre_seleccionados:
+                print("Ingredientes seleccionados actualmente: Ninguno")
+                
+               
+
+
+
+
+        
+    
+        
+
+        
+    
+    
+        
+    
+    
+    
     #opcion_ingredientes = input()
     #ingrediente = []
     #print({ingrediente})
     
-    else:
-        print("Elige una opcion valida de Ingredientes")
+    
 
     """"
         print("las opciones son :")

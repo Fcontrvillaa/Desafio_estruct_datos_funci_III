@@ -32,19 +32,14 @@ def main():
                     pizza ["Salsa"] = salsa()
 
                 elif opcion_personalizar == "c":
-                    ingredientes()
+                    pizza ["ingredientes"] = ingredientes()
                         
                         
-                
-                
-                
-                
-                
                 elif opcion_personalizar == "d":
                     print("vuelve a menu principal")
                     break
                 
-                else:       # Si la opción no es 'a', 'b', 'c', 'd' 
+                else:       # Si la opción no es a, b ,c o d
                     print("Opción no válida. Por favor, ingrese una letra de las opciones mostradas.")
 
 
