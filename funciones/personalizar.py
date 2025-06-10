@@ -72,10 +72,11 @@ def ingredientes():
 
     while True:
         #Menu para seleccion añair / quitar  / salir
-        print("""---Que desea hacer?--
-        'a' para Añadir un ingrediente
-        'q' para Quitar un ingrediente
-        's' para salir           
+        print("""---Seleccione la accion--
+        
+    "a" para Añadir un ingrediente
+    "q" para Quitar un ingrediente
+    "s" para Salir           
               
               """)     
         
